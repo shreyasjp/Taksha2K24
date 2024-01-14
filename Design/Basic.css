@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Data/Fonts/Montserrat Thin 250.ttf     ") format("truetype");
+  font-weight: 250;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Data/Fonts/Montserrat Regular 400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Data/Fonts/Montserrat Italic 400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Data/Fonts/Montserrat Bold 700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Data/Fonts/Montserrat Black 900.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Estrand";
+  src: url("../Data/Fonts/Estrand 400.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "The Youngest Serif";
+  src: url("../Data/Fonts/The Youngest Serif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-user-select: none;
+  /* For Safari */
+  -moz-user-select: none;
+  /* For Firefox */
+  -ms-user-select: none;
+  /* For Microsoft Edge */
+  -webkit-user-drag: none;
+  /* For Safari */
+  -moz-user-drag: none;
+  /* For Firefox */
+  -ms-user-drag: none;
+  /* For Microsoft Edge */
+  -webkit-touch-callout: none;
+  /* For Safari */
+  -moz-touch-callout: none;
+  /* For Firefox */
+  -ms-touch-callout: none;
+  /* For Microsoft Edge */
+}
+
+input::-ms-reveal {
+  display: none;
+}
+input::-ms-clear {
+  display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--text-color);
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #ffffff00;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*   @media only screen and (max-width: 768px) {
+    #container {
+      transform: scale(0.85);
+    }
+  } */
+
+.hide {
+  display: none !important;
+}
+
+ :root {
+  --body-bg: #1f1e27;
+}
+
+/* color: var(--variable-name) */

@@ -1,0 +1,505 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 99.7%;
+    height: 100%;
+}
+#home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 25px;
+    width: 100vw;
+    height: 97vh;
+}
+#title{
+    width: 1024px;
+    margin: 20px;
+    padding: 0;
+}
+#register{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    color: #4b2a85;
+    font-size: 22px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px 10px 15px;
+    gap: 35px;
+}
+#register span{
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to right, #a6127d, #7c68a5, #356be5);
+    mask: url('../Data/Icons/NextBlack.png') center / contain no-repeat;
+}
+#about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+}
+#full-logo {
+    height: 400px;
+    margin-top: 20px;
+}
+#about-text-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: white;
+}
+#about-text-content span{
+    font-family: 'The Youngest Serif';
+    background-image: linear-gradient(
+        to right,
+        #462523 0,
+               #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.387);
+}
+#about-text-content h2{
+    padding: 0;
+    margin: 5px;
+}
+#events-container{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+}
+#events-header{
+    font-size: 90px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.498);
+    background-image: url(../Data/Images/Header.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 67%;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+#filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.615);
+    border: 1px solid;
+}
+.active-filter{
+    border-image: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
+    border-image-slice: 1;
+    background-image: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.158);
+}
+#event-tile-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    width: 1200px;
+}
+.event-tile{
+    width: 320px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
+    border-radius: 5px;
+}
+.event-time{
+    width: 100%;
+    font-size: 13px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.event-poster{
+    width: 200px;
+    object-fit: contain;
+    margin: 10px;
+    padding: 0;
+}
+.event-title{
+    width: 100%;
+    padding: 0;
+    margin: 10px;
+}
+.event-desc{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+.event-fees{
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0 0;
+    color: #c5ff1f;
+}
+.event-fees span{
+    width: 100%;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+.event-expansions{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.event-explain{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-weight: 600;
+}
+.event-register{
+    text-decoration: none;
+    display: flex;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: none;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, #fbf714, #f3fd66, #d4ff12);
+}
+#team-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    box-sizing: border-box;
+    padding: 25px;
+}
+#team-header{
+    font-size: 90px;
+    font-weight: 900;
+    padding: 0;
+    margin: 30px;
+    color: rgb(255, 255, 255);
+}
+#team-members{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 768px;
+}
+.team-levels{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.team-member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 7px;
+}
+.team-member-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    border: 1px solid;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border-image: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
+    border-image-slice: 1;
+    background-image: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.158);
+}
+.team-member-name{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.team-member-role{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.team-member-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    gap: 3px;
+    font-size: 13px;
+}
+#role-hod{
+    font-size: 18px;
+    text-align: center;
+}
+.role_staff{
+    font-size: 16px;
+    text-align: center;
+}
+#contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 25px;
+    width: 100vw;
+    background-color: black;
+}
+#contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 10px;
+}
+#contact-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#contact-right iframe{
+    width: 300px;
+    height: 275px;
+}
+#spc-logo{
+    width: 160px;
+    height: 120px;
+}
+#spc{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    color: white;
+    margin-top: 10px;
+}
+#spc h1{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+#spc-caption{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+#spc-address{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+#contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+.contact-info-field{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0;
+    margin-left: 35px;
+    color: white;
+}
+.contact-info-title{
+    margin: 0%;
+    padding: 0%;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact-info-data{
+    margin: 0%;
+    padding: 0%;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#contact-header{
+    font-size: 55px;
+    font-weight: 900;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+.vertical-line {
+    border-left:5px solid #ffffff; /* You can change the color and thickness of the line */
+    height: 300px; /* Adjust the height as needed */
+    margin-left: 300px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #242424;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, #a6127d, #7c68a5, #356be5);
+  }
+  @supports(scrollbar-color: red blue){
+    *{
+      scrollbar-color: #242424 #f9f9f9;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    #home img{
+        width: 105vw;
+        margin: 0;
+    }
+    #home button{
+        transform: scale(0.7);
+        margin-top: 30px;
+    }
+    #countdown-container{
+        transform:scale(0.8);
+    }
+    #home-container{
+        gap: 0px;
+    }
+    #about-container img{
+        width: 100px;
+        height: auto;
+    }
+    #about-container p{
+        font-size: 15px;
+    }
+    #about-container h2{
+        display: none;
+    }
+    #events-container h1{
+        font-size: 40px;
+    }
+    #events-container p{
+        font-size: 10px;
+    }
+    #event-tile-container{
+        gap: 0;
+        flex-direction: column;
+    }
+    .event-tile{
+        transform: scale(0.9);
+    }
+    .event-desc{
+        font-size: 14px !important;
+    }
+    .event-fees{
+        font-size: 20px !important;
+    }
+    .event-explain{
+        font-size: 14px !important;
+    }
+    .event-time{
+        font-size: 12px !important;
+    }
+    .event-register{
+        transform: scale(0.85);
+    }
+    #contact-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .vertical-line{
+        display: none;
+    }
+    #contact-right{
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    #contact-info h1{
+        font-size: 16px;
+    }
+    #contact-info p{
+        font-size: 12px;
+    }
+    #spc-logo{
+        width: 120px;
+        height: 100px;
+    }
+    #spc{
+        transform: scale(0.7);
+    }
+  }
