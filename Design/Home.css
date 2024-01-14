@@ -465,6 +465,13 @@
     #about-container h2{
         font-size: 17px;
     }
+    #events{
+        max-width: 98vw;
+    }
+    #events-container{
+        max-width: 98vw;
+        gap: 0px;
+    }
     #events-container h1{
         font-size: 40px;
     }
@@ -474,6 +481,9 @@
     #event-tile-container{
         gap: 0;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 98vw;
     }
     .event-tile{
         transform: scale(0.9);
