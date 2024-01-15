@@ -1,0 +1,350 @@
+a {
+    text-decoration: none;
+  }
+.hide {
+    display: none !important;
+}
+
+body {
+    background: url(../Data/Images/Pattern.png), #1f1e27 !important;
+    background-blend-mode: soft-light;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color:#fff;
+    font-family: sans-serif;
+    font-family: 'Montserrat';
+    
+}
+
+.main {
+
+    max-width: 768px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    
+}
+button {
+    background-image: url(../Data/Images/ButtonBackground.svg);
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    margin-left:15%;
+    
+  }
+
+button:hover {
+    filter: brightness(120%);
+  }
+
+
+
+
+.first-con{
+    display: flex;
+    margin-bottom: 10px;
+}
+.first-con-img{
+    padding: 15px;
+    background-color: var(--event-desc-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.first-con img{
+    height: 400px;
+}
+.heading-first-con{
+   padding-top:6%;
+   padding-left:5%;
+}
+.heading-first-con h1{
+    font-size: 36px;
+}
+.heading-first-con p{
+    font-size: 15px;
+    padding: 2%;
+    padding-left:3%;
+    padding-right:3%;
+    width: max-content;
+    background-color: var(--event-desc-bg);
+}
+
+
+
+
+
+.second-con {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Stretch children to fill the entire height of the parent */        
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.heading-second-con,
+.para-second-con {
+    flex-grow: 1; /* Allow the children to grow and fill available space */
+}
+
+.heading-second-con {
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: var(--event-desc-bg);
+    padding: 30px;
+}
+
+.heading-second-con h2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.heading-second-con h1 {
+    font-size: 44px;
+    color: #c5ff15;
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+}
+
+.para-second-con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 15px;
+    background-color: var(--event-desc-bg);
+}
+
+
+.third-con{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--event-desc-bg);
+    padding: 30px;
+}
+.para-third-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right:1px solid #ffffff99;
+    padding-right:5%;
+    padding-left:5%;
+    gap: 10px;
+}
+.para-third-con-spcl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right:5%;
+    padding-left:5%;
+    gap: 10px;
+}
+.third-con p{
+    color:#ffffff99;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+.third-con b{
+    color:#ffffff;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+.third-con button{
+    margin: 5%;
+}
+
+
+
+
+
+.fourth-con{
+    padding-right:5%;
+    padding-left:5%;
+    margin-bottom: 10px;
+    background-color: var(--event-desc-bg);
+    padding: 30px;
+}
+.heading-fourth-con{
+    font-size: 15px;
+}
+.para-fourth-con{
+    color:#ffffff99;
+}
+
+
+
+
+.fifth-con{
+    padding-right:5%;
+    padding-left:5%;
+    margin-bottom: 10px;
+    background-color: var(--event-desc-bg);
+    padding: 30px;
+}
+.heading-fifth-con{
+    font-size: 15px;
+}
+
+
+
+
+.sixth-con{
+    padding-right:5%;
+    padding-left:5%;
+    margin-bottom: 10px;
+    background-color: var(--event-desc-bg);
+    padding: 30px;
+}
+li{
+    color:#ffffff99;
+    line-height: 3vh;
+}
+.seventh-con{
+    padding-right:5%;
+    padding-left:5%;
+    background-color: var(--event-desc-bg);
+    padding: 30px;      
+}
+.seventh-con-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    gap: 50px;
+}
+.grp-seventh-con{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.para-seventh-con{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    gap: 10px;
+}
+.para-seventh-con a{
+    padding: 0;
+    margin: 0;
+}
+
+ 
+  @media only screen and (max-width: 768px) {
+    .main {
+        max-width: 100%; /* Adjust the maximum width for smaller screens */
+        margin-top: 5%; /* Adjust margin for smaller screens */
+    }
+    .first-con {
+        flex-direction: column-reverse; /* Change the direction of flex items to column-reverse */
+    }
+    .first-con{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .first-con img{
+        width: 100%;
+    }
+
+    .second-con {
+        box-sizing: border-box;
+        padding: 20px; /* Add padding to the container */
+    }
+    .third-con {
+        box-sizing: border-box;
+        margin: 20px; /* Add padding to the container */
+        display: flex;
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+    .para-third-con{
+        border-right: 0px;
+        border-bottom: 1px solid #ffffff99;
+        width: 100%;
+        padding: 20px;
+    }
+    .para-third-con-spcl{
+        width: 100%;
+        padding: 20px;
+    }
+    .para{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    .fourth-con{
+        box-sizing: border-box;
+        margin: 20px; /* Add padding to the container */
+        padding: 20px;
+    }
+    .sixth-con{
+        box-sizing: border-box;
+        margin: 20px; /* Add padding to the container */
+        padding: 20px;
+    }
+    .seventh-con{
+        box-sizing: border-box;
+        margin: 20px; /* Add padding to the container */
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .seventh-con-info{
+        flex-direction: row;
+        justify-content: left;
+    }
+    .seventh-con-info b{
+        font-size: 14px;
+    }
+    .seventh-con-info a{
+        font-size: 13px;
+    }
+    .seventh-con-info img{
+        width: 50px;
+        gap: 0px;
+    }
+    .para-seventh-con{
+        gap: 3px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+   
+  
+    .heading-first-con h1 {
+        font-size: 28px; /* Adjust heading font size for smaller screens */
+    }
+
+    .heading-second-con h1 {
+        font-size: 36px; /* Adjust heading font size for smaller screens */
+    }
+
+    .para-second-con,
+    .para-third-con {
+        font-size: 14px; /* Adjust paragraph font size for smaller screens */
+    }
+
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
