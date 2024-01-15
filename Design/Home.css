@@ -6,6 +6,14 @@
     width: 99.7%;
     height: 100%;
 }
+#page-loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background: linear-gradient(to right, #a6127d, #356be5);
+    mask: url('../Data/Animations/SpinnerMedium.svg') center / cover no-repeat;
+}
 #home-container{
     display: flex;
     flex-direction: column;
@@ -57,6 +65,7 @@
     gap: 15px;
     box-sizing: border-box;
     padding: 25px;
+    margin-top: 23px;
 }
 #full-logo {
     height: 400px;

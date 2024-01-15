@@ -16,7 +16,6 @@
     <link rel="preload" as="image" href="Data/Animations/SpinnerMedium.svg" />
     <link rel="preload" as="image" href="Data/Animations/SpinnerSmall.svg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="Design/Colors.css" />
     <link rel="stylesheet" type="text/css" href="Design/Basic.css" />
     <link rel="stylesheet" type="text/css" href="Design/NavBar.css" />
     <link rel="stylesheet" type="text/css" href="Design/Home.css" />
@@ -34,8 +33,8 @@
 </head>
 
 <body class="light">
-    <img id="page-loader" class="hide" src="Data/Animations/SpinnerMedium.svg" />
-    <nav class="">
+    <center><img id="page-loader" class="hide" src="Data/Animations/SpinnerMedium.svg" /></center>
+    <nav class="hide">
         <div class="nav-content">
             <a href="index.html" class="logo"> TAKSHA'24 </a>
             <div class="nav-links">
@@ -45,7 +44,7 @@
             </div>
         </div>
     </nav>
-    <div id="container" class="">
+    <div id="container" class="hide">
         <section id="home" class="section">
             <div id="home-container">                
                 <img id="title" src="Data/Images/Taksha ColorBlock.png">
@@ -266,8 +265,30 @@
         </section>
     </div>
 </body>
+<noscript>
+    <div style="box-sizing: bordeborder-box; text-align: center; margin: 30px; padding: 20px; background-color: #ffdcdc; border: 1px solid red; border-radius: 5px;">
+      <p>This website requires JavaScript to function. Please enable JavaScript in your browser settings to view this page.</p>
+    </div>
+  </noscript>
+  <script type="text/javascript">document.getElementById('page-loader').classList.remove('hide');</script>
+<script type="text/javascript">
+    function handleLoad() {
+        const loader = document.getElementById("page-loader");
+        const content = document.getElementById("container");
+        const navBar = document.querySelector("nav");
+    
+        if (loader && content) {
+        loader.remove();
+        content.classList.remove("hide");
+        if (navBar){
+            navBar.classList.remove("hide");
+        }
+        }
+    }
+    
+    window.addEventListener("load", handleLoad);
+</script>
 <script type="text/javascript" src="Interaction/NavBar.js"></script>
 <script type="text/javascript" src="Interaction/Countdown.js"></script>
 <script type="text/javascript" src="Interaction/Home.js"></script>
-
 </html>

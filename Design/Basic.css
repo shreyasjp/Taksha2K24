@@ -67,6 +67,10 @@ body {
   /* For Firefox */
   -ms-touch-callout: none;
   /* For Microsoft Edge */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 input::-ms-reveal {
