@@ -23,19 +23,20 @@ h1 {
     font-size: 80px;
     font-weight: 500;
     color: transparent;
-    background: #ff58bc;
+    background: rgb(255, 150, 213);
+    font-weight: 700;
     -webkit-background-clip: text;
     background-clip: text;
     padding: 0;
-    margin: 0;
-    text-shadow: 0 0 10px #fa4bb4, 0 0 10px #1f1e27;
+    margin: 0;    
+    filter: drop-shadow(0em 0em 0.01785031em rgba(255, 0, 153, 0.950000)) drop-shadow(0em 0em 0.08925156em rgba(255, 0, 153, 0.750000)) drop-shadow(0em 0em 0.26775469em rgba(255, 0, 153, 0.440000));
 }
 
 
 
 p{
     padding: 0;
-    margin: 5PX 0 25px 0;
+    margin: 10px 0 25px 0;
     color: #cecece;
     font-weight: 600;
 }
@@ -46,13 +47,12 @@ p{
     align-items: center;
     justify-content: left;
     position: relative;
-    margin-bottom: 20px;
     width: 300px;
+    margin-top:20px ;
 }
 .input-bx input {
     width: 100%;
-    padding: 10px;
-    
+    padding: 10px;    
     border-radius: 15px;
     border-image: linear-gradient(to left top, #a6127d, #7c68a5, #356be5);
     border-image-slice: 1;
@@ -65,48 +65,105 @@ p{
 }
 
 
-
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
 .input-bx span{
     position: absolute;
     left: 7px;
     padding: 10px;
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     color: linear-gradient(to right, #a6127d, #7c68a5, #356be5);
     pointer-events: none;
     transition: 0.4s;
     font-weight: 400;
-    color: #fff;
+    color: #2f89ff;
 }
-.input-bx input:valid ~ span,
-.input-bx input:focus ~ span{
+.span-active{
     
     transform:  translateY(-21px);
-    font-size: 0.65rem;
+    font-size: 0.6rem !important;
     font-weight: 500;
-    padding: 0 10px;
+    padding: 0 10px 0px 6px !important;
     background: #1f1e27;
     background-blend-mode: soft-light;
-    letter-spacing: 0.1rem;
+    border-radius: 50% !important;
 }
 
-
 input[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
-    padding: 10px 20px;
     border: none;
     border-radius: 15px;
     background-image: url(../Data/Images/ButtonBackground.svg);
     color: #fff;
     cursor: pointer;
-    margin-left: 70px;
     font-size: 16px;
     
 }
 
 input[type="submit"]:hover {
-    background: #5de0e6;
+    filter: brightness(130%);
 }
 
+#submit-bx{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+}
+.message span{
+    font-family: 'The Youngest Serif';
+    background-image: linear-gradient(
+        to right,
+        #462523 0,
+               #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.387);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.error{
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 0%;
+    margin: 0%;
+    background-image: linear-gradient(135deg, #666666 0%, #999999 50%, #666666 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 71, 71, 0.565);
+    margin: 5px 3px;
+    width: 100%;
+}
 
 input::-ms-reveal {
     display: none;
@@ -119,7 +176,7 @@ input::-ms-reveal {
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
     -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--text-color);
+    -webkit-text-fill-color: white;
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px #ffffff00;
   }

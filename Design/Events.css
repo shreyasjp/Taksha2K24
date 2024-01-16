@@ -253,18 +253,32 @@ li{
     }
     .first-con {
         flex-direction: column-reverse; /* Change the direction of flex items to column-reverse */
-    }
-    .first-con{
+        margin: 0;
         box-sizing: border-box;
         padding: 20px;
     }
     .first-con img{
-        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
-
     .second-con {
         box-sizing: border-box;
         padding: 20px; /* Add padding to the container */
+        margin: 0;
+    }
+    .para-second-con{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 20px;
+    }
+    .para-second-con button{
+        margin: 0;
+    }
+    .para-second-con h2{
+        margin: 0;
     }
     .third-con {
         box-sizing: border-box;
@@ -301,7 +315,7 @@ li{
     .seventh-con{
         box-sizing: border-box;
         margin: 20px; /* Add padding to the container */
-        padding: 40px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: left;

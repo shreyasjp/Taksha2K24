@@ -15,7 +15,7 @@
     <link rel="preload" href="Data/Fonts/Estrand 400.otf" as="font" type="font/otf" crossorigin />
     <link rel="preload" as="image" href="Data/Animations/SpinnerMedium.svg" />
     <link rel="preload" as="image" href="Data/Animations/SpinnerSmall.svg" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="Design/Colors.css" />    
     <link rel="stylesheet" type="text/css" href="Design/Fonts.css" />
     <link rel="stylesheet" type="text/css" href="Design/NavBar.css" />
@@ -36,54 +36,41 @@
 <body>
     <h1></h1>
     <p></p>
-    <form id="myForm" action="">
+    <form id="myForm" action="https://script.google.com/macros/s/AKfycbwtoAn62jkZKJHzgokj7E_DB9qnunjiln5GKWpahHu3g3MJPpzpbQ3xmCRMOYfOL1vE/exec">
         <div class="input-bx">
-            <input type="text" id="clg-name" name="college" required="required" />
+            <input type="text" name="college" required="required" />
             <span>Name of College</span>
-        </div>        
-        <p class="error hide">Enter a valid name without numbers or special characters.</p>
+        </div>
         <div class="input-bx">
-            <input type="text" id='std-name' name="name" required="required" />
+            <input type="text" name="name" required="required" />
             <span>Name</span>
         </div>
-        <p class="error hide">Enter a valid name without numbers or special characters.</p>
         <div class="input-bx">
-            <input type="text" id="std-num" name="contactNumber" required="required" />
+            <input type="text" name="contactNumber" required="required" />
             <span>Contact Number</span>
         </div>
-        <p class="error hide">Enter a valid phone number.</p>
         <!-- Additional input box for 'ONE PIECE' -->
         <div class="input-bx" id="extraInputBox" style="display: none;">
-            <input type="text" id="std-mem1" name="member1"  />
+            <input type="text" name="member1" required="required" />
             <span>Name of Member 1</span>
         </div>
-        <p class="error hide">Enter a valid name without numbers or special characters.</p>
+        
         <div class="input-bx" id="xtraInputBox" style="display: none;">
-            <input type="text" id="std-mem2" name="member2"  />
+            <input type="text" name="member2" required="required" />
             <span>Name of Member 2</span>
         </div>
-        <p class="error hide">Enter a valid name without numbers or special characters.</p>
         <div class="input-bx" id="traInputBox" style="display: none;">
-            <input type="text" id="std-mem3"  name="member3"  />
+            <input type="text" name="member3" required="required" />
             <span>Name of Member 3</span>
         </div>
-        <p class="error hide">Enter a valid name without numbers or special characters.</p>
-        <div class="input-bx" style="display: none;" >
-            <input type="text" id="raInputBox" value=""  name="event"  />
+        <div class="input-bx">
+            <input type="submit">
         </div>
-        <div id="submit-bx" class="input-bx">
-            <input id="submit" type="submit">
-            <center><img id="submit-loader" style="display: none;" src="Data/Animations/SpinnerSmall.svg" /></center>
-        </div>
-        <p class="message" style="display: none;">Thank you for joining&nbsp<span>TAKSHA'24</span></p>
     </form>
     
 
-    <script type="text/javascript" src="Interaction/InputLabelHandling.js"></script>
     <script>
-        const submitLoader = document.getElementById('submit-loader');
-        const submitButton = document.getElementById('submit');
-        const message = document.querySelector('.message')
+        
         
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
@@ -102,86 +89,54 @@
             document.querySelector('h1').innerHTML = 'ONE PIECE';
             document.querySelector('p').innerHTML = 'TREASURE HUNTING EVENT';
             // Show the additional input box for 'ONE PIECE'
-            document.getElementById('extraInputBox').style.display = 'flex';
-            document.querySelector('input[name="member1"]').required = true;
-            document.getElementById('xtraInputBox').style.display = 'flex';
-            document.querySelector('input[name="member2"]').required = true;
-            document.getElementById('traInputBox').style.display = 'flex';
-            document.querySelector('input[name="member3"]').required = true;
-            document.getElementById('raInputBox').value = 'onepiece';
+            document.getElementById('extraInputBox').style.display = 'block';
+            document.getElementById('xtraInputBox').style.display = 'block';
+            document.getElementById('traInputBox').style.display = 'block';
         }
         else if(detailValue == 'tt') {
-            document.querySelector('h1').innerHTML = 'TWIST\'N\'TURN';
+            document.querySelector('h1').innerHTML = 'TWIST N TURN';
             document.querySelector('p').innerHTML = 'SPEED CUBING EVENT';
-            document.getElementById('raInputBox').value = 'twistnturn';
-            
         }
         else if(detailValue == 'tq') {
-            document.querySelector('h1').innerHTML = 'THINKQUAKE';
+            document.querySelector('h1').innerHTML = 'THINK QUAKE';
             document.querySelector('p').innerHTML = 'IDEA PITCHING EVENT';
-            document.getElementById('extraInputBox').style.display = 'flex';
-            document.querySelector('input[name="member1"]').required = true;
-            document.getElementById('xtraInputBox').style.display = 'flex';
-            document.getElementById('raInputBox').value = 'thinkquake';
+            document.getElementById('extraInputBox').style.display = 'block';
+            document.getElementById('xtraInputBox').style.display = 'block';
         }
         else if(detailValue == 'ct') {
             document.querySelector('h1').innerHTML = 'CREATRIX';
             document.querySelector('p').innerHTML = 'WEB DESIGNING EVENT';
-            document.getElementById('extraInputBox').style.display = 'flex';
-            document.getElementById('raInputBox').value = 'creatrix';
+            document.getElementById('extraInputBox').style.display = 'block';
         }
         else if(detailValue == 'll') {
             document.querySelector('h1').innerHTML = 'LETHAL LEGION';
             document.querySelector('p').innerHTML = 'E-SPORTS COMPETITION';
-            document.getElementById('extraInputBox').style.display = 'flex';
-            document.querySelector('input[name="member1"]').required = true;
-            document.getElementById('xtraInputBox').style.display = 'flex';
-            document.querySelector('input[name="member2"]').required = true;
-            document.getElementById('traInputBox').style.display = 'flex';
-            document.querySelector('input[name="member3"]').required = true;
-            document.getElementById('raInputBox').value = 'lethallegion';
+            document.getElementById('extraInputBox').style.display = 'block';
+            document.getElementById('xtraInputBox').style.display = 'block';
+            document.getElementById('traInputBox').style.display = 'block';
         }
         else if(detailValue == 'bb') {
             document.querySelector('h1').innerHTML = 'BUGBOUNTY';
             document.querySelector('p').innerHTML = 'DEBUGGING CONTEST';
-            document.getElementById('raInputBox').value = 'bugbounty';
         }
         document.getElementById('myForm').addEventListener('submit', function(event) {
-        
         event.preventDefault();
-        if(clg_name_status === 'true' && name_status === 'true' && phone_status === 'true' && mem1_status === 'true' && mem2_status === 'true' && mem3_status === 'true'){
-            submitLoader.style.display = 'flex';
-        submitButton.style.display = 'none';
+
         var formData = new FormData(this);
 
-        fetch('https://script.google.com/macros/s/AKfycbyHfSJHtS2eKoAOQ5U52VcGqc1uaOMV9qX2v93_Ff0bTKn-hsYfyiq_4G11LdbxwDR4/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwtoAn62jkZKJHzgokj7E_DB9qnunjiln5GKWpahHu3g3MJPpzpbQ3xmCRMOYfOL1vE/exec', {
             method: 'POST',
             body: formData
         }).then(response => {
             if (response.ok) {
-                submitLoader.style.display = 'none';
-                submitButton.style.display = 'flex';
-                document.getElementById('myForm').reset();
-                message.style.display = 'flex';
-                setTimeout(()=>{
-                    message.style.display = 'none';
-                },2000)
-                setTimeout(()=>{
-                    window.location.href = 'index.html'
-                },1000)                
-            } else {                
-                submitLoader.style.display = 'none';
-                submitButton.style.display = 'flex';
-                message.textContent = "There was a problem at our side. Please try again later.";
-                message.style.display = 'flex';
-                setTimeout(()=>{
-                    message.style.display = 'none';
-                },2000)
+                console.log('Form submitted successfully.');
+                // You can add further actions here if needed.
+            } else {
+                console.error('Error submitting form.');
             }
         }).catch(error => {
             console.error('Error during form submission:', error);
         });
-        }
     });
     </script>
 </body>

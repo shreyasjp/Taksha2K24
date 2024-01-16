@@ -7,7 +7,11 @@ nav {
     overflow: hidden;
     transition: 0.3s;
     z-index: 999;
-    background-color: rgb(37, 37, 37);
+    background: transparent;
+}
+nav.scrolled {
+  background-color: #1f1e27;
+  transition: background-color 200ms linear;
 }
 .nav-content {
     margin: 0 auto;

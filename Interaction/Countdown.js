@@ -33,6 +33,6 @@ var x = setInterval(function () {
   // If the countdown is over, display a message
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown-container").innerHTML = "Bits & Beats Live!";
+    document.getElementById("countdown-container").innerHTML = "";
   }
 }, 1000);

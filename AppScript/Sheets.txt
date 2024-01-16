@@ -1,0 +1,31 @@
+function doPost(e) {
+  // Define the sheet name based on the value of 'event' parameter
+  var sheetName = e.parameter.event;
+
+
+  // Open the spreadsheet by its ID
+  var sheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM').getSheetByName(sheetName);
+
+  // If the sheet does not exist, create a new sheet with the determined name
+  if (!sheet) {
+    var spreadsheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM');
+    spreadsheet.insertSheet(sheetName);
+    sheet = spreadsheet.getSheetByName(sheetName);
+  }
+
+  // Create an array of data to append to the sheet
+  var rowData = [
+    e.parameter.college,
+    e.parameter.name,
+    e.parameter.contactNumber,
+    e.parameter.member1,
+    e.parameter.member2,
+    e.parameter.member3,
+  ];
+
+  // Append the data to the sheet
+  sheet.appendRow(rowData);
+
+  // Return a success message
+  return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
+}
