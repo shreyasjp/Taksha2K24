@@ -15,6 +15,13 @@
     background: linear-gradient(to right, #a6127d, #356be5);
     mask: url('../Data/Animations/SpinnerMedium.svg') center / cover no-repeat;
 }
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 #home-container{
     display: flex;
     flex-direction: column;
@@ -30,6 +37,7 @@
     width: 1024px;
     margin: 20px;
     padding: 0;
+    margin-left: 150px;
 }
 #sponsors{
     display: flex;
@@ -115,7 +123,6 @@
     margin: 5px;
 }
 #events-container{
-    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,6 +143,8 @@
     background-position: 50% 67%;
     background-clip: text;
     -webkit-background-clip: text;
+    margin-bottom: 50px;
+    filter: brightness(150%);
 }
 #filters{
     display: flex;
@@ -171,7 +180,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 50px;
-    width: 1200px;
+    max-width: 1200px;
 }
 .event-tile{
     width: 320px;
@@ -264,6 +273,10 @@
     padding: 0;
     margin: 30px;
     color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #team{
     min-height: 100vh;
@@ -280,6 +293,7 @@
     box-sizing: border-box;
     padding: 25px;
     height: 100%;
+    flex-wrap: wrap;
 }
 #team-members{
     display: flex;
@@ -295,6 +309,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap
 }
 .team-member{
     display: flex;
@@ -354,6 +369,17 @@
     font-size: 16px;
     text-align: center;
 }
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-sizing: border-box;
+    padding: 25px;
+    min-width: 100vw;
+
+}
 #contact-container{
     display: flex;
     flex-direction: row;
@@ -361,8 +387,9 @@
     justify-content: space-evenly;
     box-sizing: border-box;
     padding: 25px;
-    width: 100vw;
+    min-width: 100vw;
     background-color: black;
+    flex-wrap: wrap;
 }
 #contact-left{
     display: flex;
@@ -370,6 +397,9 @@
     align-items: left;
     justify-content: center;
     gap: 10px;
+    box-sizing: border-box;
+    padding: 25px;
+    flex-wrap: wrap;
 }
 #contact-right{
     display: flex;
@@ -377,6 +407,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 #contact-right iframe{
     width: 300px;
@@ -450,7 +481,8 @@
 .vertical-line {
     border-left:5px solid #ffffff; /* You can change the color and thickness of the line */
     height: 300px; /* Adjust the height as needed */
-    margin-left: 300px;
+    margin-left: 20vw;
+    margin-right: 25px;
 }
 
 ::-webkit-scrollbar{
@@ -467,11 +499,31 @@
       scrollbar-color: #242424 #f9f9f9;
     }
   }
-
+  @media only screen and (max-width: 1024px){
+    #title{        
+        margin: 0;   
+        margin-left: 12vw;
+        width: 105vw;
+    }
+  }
+  @media only screen and (max-width: 380px){
+    #team-header{
+        font-size: 11vw !important;
+    }
+    .event-tile{
+        width: 80vw;
+        }
+  }
+  @media only screen and (max-width: 600px){
+    #team-header{
+        font-size: 70px;
+        }
+  }
   @media only screen and (max-width: 768px){
     #title{
         width: 105vw;
-        margin: 0;
+        margin: 0;        
+        margin-left: 12vw;
     }
     #home button{
         transform: scale(0.7);
@@ -515,7 +567,7 @@
         gap: 0px;
     }
     #events-container h1{
-        font-size: 40px;
+        font-size: 70px;
     }
     #events-container p{
         font-size: 10px;
@@ -572,3 +624,83 @@
         flex-direction: column;
     }
   }
+  @media(max-width: 630px){
+    #events-container h1{
+        font-size: 60px;
+    }
+  }
+  @media(max-width: 570px){
+    #events-container h1{
+        font-size: 50px;
+    }
+  }
+  @media(max-width: 480px){
+    #events-container h1{
+        font-size: 40px;
+    }
+    #team-header{
+        font-size: 50px;
+        }
+  }
+  @media(max-width: 570px){
+    #events-container h1{
+        font-size: 10vw;
+    }
+  }
+  @media (max-height: 900px){
+    #home-container{
+        padding-top: 50px;
+    }
+  }
+  @media (max-height: 850px){
+    #home-container{
+        padding-top: 100px;
+    }
+  }
+    @media (max-height: 769px){
+        #home-container{
+            padding-top: 150px;
+        }
+    }
+    @media (max-height: 720px){
+        #home-container{
+            padding-top: 220px;
+        }
+    }
+    @media (max-height: 650px){
+        #home-container{
+            padding-top: 300px;
+        }
+    }
+    .footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        z-index: 9999;
+        text-align: center;
+        margin: 0;
+        font-size: 12px;
+    }
+    .footer span{
+        cursor: default;
+    }
+    .taksha{
+        font-family: 'The Youngest Serif';
+        background-image: linear-gradient(
+        to right,
+        #462523 0,
+               #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+        );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, 0.387);
+    }
+    body{
+        overflow-x: hidden;
+    }

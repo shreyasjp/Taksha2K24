@@ -96,7 +96,7 @@
         <section id="events" class="section">
             <div id="events-container">
                 <h1 id='events-header'>COMPETITIONS</h1>
-                <div id="filters">
+                <div id="filters" class="hide">
                     <p class="filters" onclick="toggleActive(this);" id="coding-filter">Coding</p>
                     <p class="filters" onclick="toggleActive(this);" id="gaming-filter">Gaming</p>
                     <p class="filters" onclick="toggleActive(this);" id="intellectual-filter">Intellectual</p>
@@ -130,7 +130,7 @@
                         <h2 class="event-title">ThinkQuake</h2>
                         <p class="event-desc">ThinkQuake is the stage for ideas that resonate with brilliance. Pitch
                             your innovative concepts and witness the seismic impact of your thoughts.</p>
-                        <h3 class="event-fees">₹150 <span>per reg</span></h3>
+                        <h3 class="event-fees">₹100 <span>per reg</span></h3>
                         <div class="event-expansions">
                             <p class="event-explain" onclick="window.location = 'ThinkQuake.html';">Learn more</p><button class="event-register" onclick="window.location = 'register.html?detail=tq';">Register</button>
                         </div>
@@ -163,7 +163,7 @@
                         <p class="event-desc">Enter the arena of Lethal Legion, our mobile gaming event. Compete against
                             the best, showcase your gaming prowess, and emerge victorious in this digital battleground.
                         </p>
-                        <h3 class="event-fees">₹80 <span>per team</span></h3>
+                        <h3 class="event-fees">₹100 <span>per team</span></h3>
                         <div class="event-expansions">
                             <p class="event-explain" onclick="window.location = 'LethalLegion.html';">Learn more</p><button class="event-register" onclick="window.location = 'register.html?detail=ll';">Register</button>
                         </div>
@@ -172,6 +172,7 @@
             </div>
         </section>
     </div>
+    <a href='contact.html' class="hide footer">Contact Us<span> | Copyright © 2024 <span class="taksha">TAKSHA'24</span></span></a>
 </body>
 <noscript>
     <div style="box-sizing: bordeborder-box; text-align: center; margin: 30px; padding: 20px; background-color: #ffdcdc; border: 1px solid red; border-radius: 5px;">
@@ -184,12 +185,16 @@
         const loader = document.getElementById("page-loader");
         const content = document.getElementById("container");
         const navBar = document.querySelector("nav");
+        const footer = document.querySelector(".footer");
     
         if (loader && content) {
         loader.remove();
         content.classList.remove("hide");
         if (navBar){
             navBar.classList.remove("hide");
+        }
+        if (footer){
+            footer.classList.remove("hide");
         }
         }
     }

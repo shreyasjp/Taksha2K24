@@ -10,6 +10,8 @@ body {
     background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     color:#fff;
     font-family: sans-serif;
@@ -25,6 +27,12 @@ body {
 
     
 }
+
+#page-loader{    
+    background: linear-gradient(to right, #a6127d, #356be5);
+    mask: url('../Data/Animations/SpinnerMedium.svg') center / cover no-repeat;
+}
+
 button {
     background-image: url(../Data/Images/ButtonBackground.svg);
     color: #ffffff; 
