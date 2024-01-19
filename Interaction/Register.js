@@ -38,7 +38,7 @@ if (detailValue == "op") {
   document.querySelector('input[name="member2"]').required = true;
   document.getElementById("traInputBox").style.display = "flex";
   document.querySelector('input[name="member3"]').required = true;
-  document.getElementById("raInputBox").value = "onepiece";
+  document.getElementById("raInputBox").value = "OnePiece";
 } else if (detailValue == "tt") {
   const lst = ["ll", "ct", "tq"];
   document.querySelectorAll(".event-names").forEach((eventName) => {
@@ -52,7 +52,7 @@ if (detailValue == "op") {
   });
   document.querySelector("h1").innerHTML = "TWIST'N'TURN";
   document.querySelector("p").innerHTML = "SPEED CUBING EVENT";
-  document.getElementById("raInputBox").value = "twistnturn";
+  document.getElementById("raInputBox").value = "TwistNTurn";
 } else if (detailValue == "tq") {
   const lst = ["ll", "ct", "tt", "bb"];
   document.querySelectorAll(".event-names").forEach((eventName) => {
@@ -69,7 +69,7 @@ if (detailValue == "op") {
   document.getElementById("extraInputBox").style.display = "flex";
   document.querySelector('input[name="member1"]').required = true;
   document.getElementById("xtraInputBox").style.display = "flex";
-  document.getElementById("raInputBox").value = "thinkquake";
+  document.getElementById("raInputBox").value = "ThinkQuake";
 } else if (detailValue == "ct") {
   const lst = ["ll", "bb", "tt", "tq"];
   document.querySelectorAll(".event-names").forEach((eventName) => {
@@ -84,7 +84,7 @@ if (detailValue == "op") {
   document.querySelector("h1").innerHTML = "CREATRIX";
   document.querySelector("p").innerHTML = "WEB DESIGNING EVENT";
   document.getElementById("extraInputBox").style.display = "flex";
-  document.getElementById("raInputBox").value = "creatrix";
+  document.getElementById("raInputBox").value = "Creatrix";
 } else if (detailValue == "ll") {
   const lst = ["tt", "ct", "tq"];
   document.querySelectorAll(".event-names").forEach((eventName) => {
@@ -104,7 +104,7 @@ if (detailValue == "op") {
   document.querySelector('input[name="member2"]').required = true;
   document.getElementById("traInputBox").style.display = "flex";
   document.querySelector('input[name="member3"]').required = true;
-  document.getElementById("raInputBox").value = "lethallegion";
+  document.getElementById("raInputBox").value = "LethalLegion";
 } else if (detailValue == "bb") {
   const lst = ["ct", "tq"];
   document.querySelectorAll(".event-names").forEach((eventName) => {
@@ -118,7 +118,7 @@ if (detailValue == "op") {
   });
   document.querySelector("h1").innerHTML = "BUGBOUNTY";
   document.querySelector("p").innerHTML = "DEBUGGING CONTEST";
-  document.getElementById("raInputBox").value = "bugbounty";
+  document.getElementById("raInputBox").value = "BugBounty";
 }
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -135,7 +135,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     var formData = new FormData(this);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyHfSJHtS2eKoAOQ5U52VcGqc1uaOMV9qX2v93_Ff0bTKn-hsYfyiq_4G11LdbxwDR4/exec",
+      "https://script.google.com/macros/s/AKfycbxinff5Z0lWJJvaqlOpsjZ3yfTo5LBAIuuGaOv9KkuRzkYtBVXDUADi13HhV4AJUAs/exec",
       {
         method: "POST",
         body: formData,

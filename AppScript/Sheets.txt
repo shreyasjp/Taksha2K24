@@ -29,3 +29,5 @@ function doPost(e) {
   // Return a success message
   return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
 }
+
+# https://script.google.com/macros/s/AKfycbyHfSJHtS2eKoAOQ5U52VcGqc1uaOMV9qX2v93_Ff0bTKn-hsYfyiq_4G11LdbxwDR4/exec
