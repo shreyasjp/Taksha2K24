@@ -267,7 +267,7 @@ input::-ms-reveal {
 }
 
 .notification-show {
-  animation: warning 1000ms infinite alternate ease-out;
+  animation: warning 1500ms infinite alternate ease-out;
   display: flex;
 }
 .registered-show {
