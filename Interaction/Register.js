@@ -178,7 +178,7 @@ document.querySelectorAll(".red").forEach((disabled) => {
         notification.classList.add("notification-show");
         setTimeout(() => {
             notification.classList.remove("notification-show");
-        }, 2000);
+        }, 3000);
     });
 });
 

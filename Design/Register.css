@@ -76,7 +76,7 @@ form{
     width: 300px;
     box-sizing: border-box;
     padding: 25px;
-    margin: 30px;
+    margin: 0px 30px 10px 30px;
 }
 .input-bx span{
     position: absolute;
@@ -209,6 +209,7 @@ input::-ms-reveal {
     flex-wrap: wrap;
     max-width: 300px;
     margin: 10px;
+    margin-bottom: 30px;
   }
   .event-names{
     border: 1px solid rgb(43, 109, 43);
