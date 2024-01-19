@@ -31,7 +31,7 @@
     padding: 10px;
     gap: 25px;
     width: 100vw;
-    height: 97vh;
+    min-height: 97vh;
 }
 #title{
     width: 1024px;
@@ -45,10 +45,10 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    margin: 20px;
 }
 .sponsor{
-    height: 100px;
-    width: 100px;
+    height: 80px;
     object-fit: contain;
 }
 #register{
@@ -243,6 +243,13 @@
     display: flex;
     font-weight: 600;
     cursor: pointer;
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.event-desc span{
+    font-weight: 600;
+    color: rgb(27, 26, 26);
 }
 .event-register{
     text-decoration: none;

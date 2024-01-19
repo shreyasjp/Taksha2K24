@@ -43,6 +43,7 @@
 <body>
     <h1></h1>
     <p></p>
+    <div class="box">
     <form id="myForm" action="">
         <div class="input-bx">
             <input type="text" id="clg-name" name="college" required="required" />
@@ -84,7 +85,16 @@
         </div>
         <p class="message" style="display: none;">Thank you for joining&nbsp<span>TAKSHA'24</span></p>
     </form>
-    
+    <h3 class="other-events">Additional Participatory Events</h3>
+        <div class="event-list">
+            <a href="BugBounty.html" id='bb' class="event-names">BugBounty</a>
+            <a id='ct' href="Creatrix.html" class="event-names">Creatrix</a>
+            <a id='tq' href="ThinkQuake.html" class="event-names">ThinkQuake</a>
+            <a id='ll' href="LethalLegion.html" class="event-names">Lethal Legion</a>
+            <a id='op' href="OnePiece.html" class="event-names">One Piece</a>
+            <a id='tt' href="TwistNTurn.html" class="event-names">Twist'N'Turn</a>
+        </div>
+    </div>
 
     <script type="text/javascript" src="Interaction/InputLabelHandling.js"></script>
     <script>
@@ -106,6 +116,13 @@
 
         // Update the h1 element based on detailValue
         if(detailValue == 'op') {
+            const lst = [];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'ONE PIECE';
             document.querySelector('p').innerHTML = 'TREASURE HUNTING EVENT';
             // Show the additional input box for 'ONE PIECE'
@@ -118,12 +135,26 @@
             document.getElementById('raInputBox').value = 'onepiece';
         }
         else if(detailValue == 'tt') {
+            const lst = ['ll','ct','tq'];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'TWIST\'N\'TURN';
             document.querySelector('p').innerHTML = 'SPEED CUBING EVENT';
             document.getElementById('raInputBox').value = 'twistnturn';
             
         }
         else if(detailValue == 'tq') {
+            const lst = ['ll', 'ct', 'tt', 'bb'];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'THINKQUAKE';
             document.querySelector('p').innerHTML = 'IDEA PITCHING EVENT';
             document.getElementById('extraInputBox').style.display = 'flex';
@@ -132,12 +163,26 @@
             document.getElementById('raInputBox').value = 'thinkquake';
         }
         else if(detailValue == 'ct') {
+            const lst = ['ll', 'bb', 'tt', 'tq'];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'CREATRIX';
             document.querySelector('p').innerHTML = 'WEB DESIGNING EVENT';
             document.getElementById('extraInputBox').style.display = 'flex';
             document.getElementById('raInputBox').value = 'creatrix';
         }
         else if(detailValue == 'll') {
+            const lst = ['tt', 'ct', 'tq'];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'LETHAL LEGION';
             document.querySelector('p').innerHTML = 'E-SPORTS COMPETITION';
             document.getElementById('extraInputBox').style.display = 'flex';
@@ -149,6 +194,13 @@
             document.getElementById('raInputBox').value = 'lethallegion';
         }
         else if(detailValue == 'bb') {
+            const lst = ['ct', 'tq'];
+            document.querySelectorAll('.event-names').forEach(eventName => {
+                if (lst.includes(eventName.id)) {
+                    eventName.classList.add('red');
+                    eventName.setAttribute('href', 'javascript: void(0)');
+                }
+            });
             document.querySelector('h1').innerHTML = 'BUGBOUNTY';
             document.querySelector('p').innerHTML = 'DEBUGGING CONTEST';
             document.getElementById('raInputBox').value = 'bugbounty';
