@@ -532,6 +532,9 @@
         margin: 0;        
         margin-left: 12vw;
     }
+    .sponsor{
+        width: 60px;
+    }
     #home button{
         transform: scale(0.7);
         margin-top: 30px;
