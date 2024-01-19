@@ -115,14 +115,17 @@
         var detailValue = getParameterByName('detail');
 
         // Update the h1 element based on detailValue
-        if(detailValue == 'op') {
-            const lst = [];
-            document.querySelectorAll('.event-names').forEach(eventName => {
-                if (lst.includes(eventName.id)) {
-                    eventName.classList.add('red');
-                    eventName.setAttribute('href', 'javascript: void(0)');
-                }
-            });
+        if (detailValue == 'op') {
+        const lst = [];
+        document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
+            if (lst.includes(eventName.id)) {
+                eventName.classList.add('red');
+                eventName.setAttribute('href', 'javascript: void(0)');
+            }
+        });
             document.querySelector('h1').innerHTML = 'ONE PIECE';
             document.querySelector('p').innerHTML = 'TREASURE HUNTING EVENT';
             // Show the additional input box for 'ONE PIECE'
@@ -137,6 +140,9 @@
         else if(detailValue == 'tt') {
             const lst = ['ll','ct','tq'];
             document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
                 if (lst.includes(eventName.id)) {
                     eventName.classList.add('red');
                     eventName.setAttribute('href', 'javascript: void(0)');
@@ -150,6 +156,9 @@
         else if(detailValue == 'tq') {
             const lst = ['ll', 'ct', 'tt', 'bb'];
             document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
                 if (lst.includes(eventName.id)) {
                     eventName.classList.add('red');
                     eventName.setAttribute('href', 'javascript: void(0)');
@@ -165,6 +174,9 @@
         else if(detailValue == 'ct') {
             const lst = ['ll', 'bb', 'tt', 'tq'];
             document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
                 if (lst.includes(eventName.id)) {
                     eventName.classList.add('red');
                     eventName.setAttribute('href', 'javascript: void(0)');
@@ -178,6 +190,9 @@
         else if(detailValue == 'll') {
             const lst = ['tt', 'ct', 'tq'];
             document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
                 if (lst.includes(eventName.id)) {
                     eventName.classList.add('red');
                     eventName.setAttribute('href', 'javascript: void(0)');
@@ -196,6 +211,9 @@
         else if(detailValue == 'bb') {
             const lst = ['ct', 'tq'];
             document.querySelectorAll('.event-names').forEach(eventName => {
+            if (eventName.id == detailValue) {
+                eventName.classList.add('hide');
+            }
                 if (lst.includes(eventName.id)) {
                     eventName.classList.add('red');
                     eventName.setAttribute('href', 'javascript: void(0)');
