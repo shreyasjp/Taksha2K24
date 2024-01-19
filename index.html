@@ -100,6 +100,12 @@
                     <p class="filters" onclick="toggleActive(this);" id="gaming-filter">Gaming</p>
                     <p class="filters" onclick="toggleActive(this);" id="intellectual-filter">Intellectual</p>
                 </div>
+                <div id="doc-modal" class="modal hide">
+                    <div class="modal-content">              
+                      <img id="poster-display" class="poster-display">
+                      <img id="exit" src="Data/Icons/Exit.png">
+                  </div>
+                </div>
                 <div id="event-tile-container">
                     <div class="event-tile" id="bugbounty">
                         <p class="event-time">10:30 AM | Computer Science Lab</p>
@@ -198,6 +204,33 @@
     }
     
     window.addEventListener("load", handleLoad);
+</script>
+<script type="text/javascript">
+    // Get references to modal and overlay
+    const modal = document.getElementById('doc-modal');
+    const posterDisplay = document.getElementById('poster-display');
+
+    // Get references to event posters
+    const eventPosters = document.querySelectorAll('.event-poster');
+
+    // Add click event listener to each event poster
+    eventPosters.forEach((poster) => {
+        poster.addEventListener('click', () => {
+            // Get the source of the clicked poster
+            const posterSource = poster.getAttribute('src');
+
+            // Set the source of the modal's poster display
+            posterDisplay.setAttribute('src', posterSource);
+
+            // Display the modal and overlay
+            modal.classList.remove('hide');
+        });
+    });
+
+    // Close modal and overlay when clicking outside the modal
+    modal.addEventListener('click', () => {
+        modal.classList.add('hide');
+    });
 </script>
 <script type="text/javascript" src="Interaction/NavBar.js"></script>
 <script type="text/javascript" src="Interaction/Countdown.js"></script>
