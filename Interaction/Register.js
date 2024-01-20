@@ -135,7 +135,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     var formData = new FormData(this);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxinff5Z0lWJJvaqlOpsjZ3yfTo5LBAIuuGaOv9KkuRzkYtBVXDUADi13HhV4AJUAs/exec",
+      "https://script.google.com/macros/s/AKfycbyHfSJHtS2eKoAOQ5U52VcGqc1uaOMV9qX2v93_Ff0bTKn-hsYfyiq_4G11LdbxwDR4/exec",
       {
         method: "POST",
         body: formData,
