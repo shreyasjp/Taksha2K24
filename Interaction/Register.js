@@ -154,7 +154,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
             regmessage.classList.remove("registered-show");
           }, 5000);
           setTimeout(() => {
-            window.location.href = "home.html";
+            window.location.href = "Home.html";
           }, 4000);
         } else {
           submitLoader.style.display = "none";
