@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  margin: 0;
 }
 
 input::-ms-reveal {

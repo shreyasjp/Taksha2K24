@@ -19,13 +19,16 @@ var x = setInterval(function () {
   document.getElementById("countdown-container").innerHTML =
     '<div class="time-unit"><span>' +
     days +
-    "</span>DAYS</div>" + '&nbsp' +
+    "</span>DAYS</div>" +
+    "&nbsp" +
     '<div class="time-unit"><span>' +
     hours +
-    "</span>HOURS</div>" + '&nbsp' +
+    "</span>HOURS</div>" +
+    "&nbsp" +
     '<div class="time-unit"><span>' +
     minutes +
-    "</span>MINUTES</div>" + '&nbsp' +
+    "</span>MINUTES</div>" +
+    "&nbsp" +
     '<div class="time-unit"><span>' +
     seconds +
     "</span>SECONDS</div>";

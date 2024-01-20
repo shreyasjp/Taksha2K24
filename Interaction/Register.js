@@ -3,7 +3,7 @@ const submitButton = document.getElementById("submit");
 const message = document.querySelector(".message");
 
 const notification = document.getElementById("notification");
-const regmessage = document.getElementById('registered');
+const regmessage = document.getElementById("registered");
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -154,8 +154,8 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
             regmessage.classList.remove("registered-show");
           }, 5000);
           setTimeout(() => {
-              window.location.href = "index.html";
-            }, 4000);
+            window.location.href = "index.html";
+          }, 4000);
         } else {
           submitLoader.style.display = "none";
           submitButton.style.display = "flex";
@@ -174,16 +174,16 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 });
 
 document.querySelectorAll(".red").forEach((disabled) => {
-    disabled.addEventListener("click", () => {
-        notification.classList.add("notification-show");
-        setTimeout(() => {
-            notification.classList.remove("notification-show");
-        }, 3000);
-    });
+  disabled.addEventListener("click", () => {
+    notification.classList.add("notification-show");
+    setTimeout(() => {
+      notification.classList.remove("notification-show");
+    }, 3000);
+  });
 });
 
-function removeActive(){
-    document.querySelectorAll(".input-bx span").forEach((label) => {
-        label.classList.remove("span-active");
-    });
+function removeActive() {
+  document.querySelectorAll(".input-bx span").forEach((label) => {
+    label.classList.remove("span-active");
+  });
 }
