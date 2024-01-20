@@ -769,7 +769,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 20px;
   /* background-image: url(../Data/Images/test.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -777,6 +776,18 @@ body {
   background-color: #1819199c;
   margin: 0;
   box-sizing: border-box;
+}
+.bug-report a{
+  text-decoration: none;
+  color: rgb(0, 123, 255);
+  margin: 0;
+  padding: 0;
+}
+.bug-report{
+  color: #fff;
+  margin: 3px;
+  padding: 0;
+  font-size: 12px;
 }
 #college {
   display: flex;
