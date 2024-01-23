@@ -17,6 +17,7 @@ function doPost(e) {
   var rowData = [
     e.parameter.college,
     e.parameter.name,
+    e.parameter.email,
     e.parameter.contactNumber,
     e.parameter.member1,
     e.parameter.member2,
@@ -30,5 +31,5 @@ function doPost(e) {
   return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
 }
 
-#Don # https://script.google.com/macros/s/AKfycbyHfSJHtS2eKoAOQ5U52VcGqc1uaOMV9qX2v93_Ff0bTKn-hsYfyiq_4G11LdbxwDR4/exec
+#Don # https://script.google.com/macros/s/AKfycbxkzJ95i9i7JFJv9h8RcKjrznp3L5wy7MKOnfxfbTwc9SM_5WETX_B0jdnNggY0mGGf/exec
 #Shreyas # https://script.google.com/macros/s/AKfycbxinff5Z0lWJJvaqlOpsjZ3yfTo5LBAIuuGaOv9KkuRzkYtBVXDUADi13HhV4AJUAs/exec
