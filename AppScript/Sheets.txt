@@ -27,6 +27,46 @@ function doPost(e) {
   // Append the data to the sheet
   sheet.appendRow(rowData);
 
+  var sheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM').getSheetByName('ParticipantInfo');
+
+  if (!sheet) {
+    var spreadsheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM');
+    spreadsheet.insertSheet('ParticipantInfo');
+    sheet = spreadsheet.getSheetByName('ParticipantInfo');
+  }
+
+  var rowData = [
+    e.parameter.name,
+    e.parameter.email,
+    e.parameter.contactNumber
+  ];
+
+  sheet.appendRow(rowData);
+
+  var rowData = [
+    e.parameter.member1,
+    e.parameter.email,
+    e.parameter.contactNumber
+  ];
+
+  sheet.appendRow(rowData);
+
+  var rowData = [
+    e.parameter.member2,
+    e.parameter.email,
+    e.parameter.contactNumber
+  ];
+
+  sheet.appendRow(rowData);
+
+  var rowData = [
+    e.parameter.member3,
+    e.parameter.email,
+    e.parameter.contactNumber
+  ];
+
+  sheet.appendRow(rowData);
+
   // Return a success message
   return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
 }
