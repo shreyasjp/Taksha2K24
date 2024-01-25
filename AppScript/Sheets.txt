@@ -28,6 +28,7 @@ function doPost(e) {
   sheet.appendRow(rowData);
 
   var sheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM').getSheetByName('ParticipantInfo');
+  var mailto = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM').getSheetByName('Certificates');
 
   if (!sheet) {
     var spreadsheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM');
@@ -35,30 +36,49 @@ function doPost(e) {
     sheet = spreadsheet.getSheetByName('ParticipantInfo');
   }
 
+  if (!sheet) {
+    var spreadsheet = SpreadsheetApp.openById('1ylqwNacJcX0r0BfSjCcrHqGsb8Mz9EeeRIcJHPREjKM');
+    spreadsheet.insertSheet('Certificates');
+    mailto = spreadsheet.getSheetByName('Certificates');
+  }
+
   var leaderData = [
     e.parameter.name,
-    e.parameter.email,
-    e.parameter.contactNumber
+    e.parameter.email
   ];
+
+  mailto.appendRow(leaderData);
+
+  leaderData.push(e.parameter.contactNumber);
+  leaderData.push(e.parameter.event);
 
   sheet.appendRow(leaderData);
 
   var team = [];
 
   if (e.parameter.member1 !== '') {
-    var member1Data = [e.parameter.member1, e.parameter.email, e.parameter.contactNumber];
+    var member1Data = [e.parameter.member1, e.parameter.email];
+    mailto.appendRow(member1Data);
+    member1Data.push(e.parameter.contactNumber);
+    member1Data.push(e.parameter.event);
     sheet.appendRow(member1Data);
     team.push( e.parameter.member1)
   }
 
-  if (e.parameter.member2 !== '') {
-    var member2Data = [e.parameter.member2, e.parameter.email, e.parameter.contactNumber];
+  if (e.parameter.member2 !== '') {    
+    var member2Data = [e.parameter.member2, e.parameter.email];
+    mailto.appendRow(member2Data);
+    member2Data.push(e.parameter.contactNumber);
+    member2Data.push(e.parameter.event);
     sheet.appendRow(member2Data);
     team.push( e.parameter.member2)
   }
 
-  if (e.parameter.member3 !== '') {
-    var member3Data = [e.parameter.member3, e.parameter.email, e.parameter.contactNumber];
+  if (e.parameter.member3 !== '') {    
+    var member3Data = [e.parameter.member3, e.parameter.email];
+    mailto.appendRow(member3Data);
+    member3Data.push(e.parameter.contactNumber);
+    member3Data.push(e.parameter.event);
     sheet.appendRow(member3Data);
     team.push( e.parameter.member3)
   }
@@ -83,6 +103,7 @@ function sendConfirmationEmail(name, event, email, teamMembers) {
   emailBody += 'We extend our sincere appreciation for your commitment to joining Taksha\'24, and we express our gratitude for your forthcoming participation.<br><br>';
   emailBody += 'To ensure a seamless event experience, please be advised that finalizing your registration requires completing the necessary payment at the registration desk on the event day. Your cooperation in this matter is paramount.<br><br>';
   emailBody += 'Furthermore, we urge you to thoroughly review the disclaimer available on the event\'s "Learn More" page. This document contains crucial information regarding restricted participation in certain events post-registration.<br><br>';
+  emailBody += 'As a mandatory requirement, kindly ensure that you have a valid form of identification, such as your college ID card, to facilitate entry to the venue. In cases where a college ID is unavailable, a recognized photo ID will be accepted.<br><br>';
   emailBody += 'Your adherence to these directives is greatly appreciated. We anticipate your active involvement in Taksha\'24 and value your cooperation.<br><br>';
 
   // Add information about team members if they exist
