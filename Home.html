@@ -81,6 +81,7 @@
     <link rel="stylesheet" type="text/css" href="Design/Fonts.css" />
     <link rel="stylesheet" type="text/css" href="Design/NavBar.css" />
     <link rel="stylesheet" type="text/css" href="Design/Countdown.css" />
+    <link rel="stylesheet" type="text/css" href="Design/Carousel.css" />
     <title>Taksha'24 - Home</title>
     <link
       rel="apple-touch-icon"
@@ -136,29 +137,38 @@
       <section id="home" class="section">
         <div id="home-container">
           <img id="title" src="Data/Images/TakshaColorblockNoBG.png" />
-          <div id="sponsors" class="">
-            <div class="sponsor-div hide"><img></div>
-            <div class="sponsor-div">
-            <img
-              id="zoople"
-              onclick="window.open('https://zoople.in/', '_blank');"
-              src="Data/Icons/Zoople.png"
-            />
-            <p>TECHNOLOGIES PVT. LTD.</p>
+         
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <div class="carousel">
+                <div id="elites" class="carousel-item smallCarousel">
+                  <img src="Data/Icons/KeralaElites.png" alt="Image 2">
+                </div>
+                <div id="farmfed" class="carousel-item largeCarousel">
+                  <img src="Data/Icons/FarmFed.svg" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-item-div">
+                    <img
+                      onclick="window.open('https://zoople.in/', '_blank');"
+                      src="Data/Icons/Zoople.png"
+                    />
+                    <p>TECHNOLOGIES PVT. LTD.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="Data/Icons/SM.png" alt="Image 3">
+                </div>
+                <div class="carousel-item hide">
+                  <img src="Data/Icons/Irohub.webp" alt="Image 5">
+                </div>
+                <div class="carousel-item hide">
+                  <img src="Data/Icons/LCC.webp" alt="Image 6">
+                </div>
+              </div>
             </div>
-            <img
-              id="keralaelites"
-              onclick="window.open('https://www.instagram.com/keralaelites/?hl=en', '_blank');"
-              class="sponsor"
-              src="Data/Icons/KeralaElites.png"
-            />
-            <img
-              id="stmarys"
-              onclick="window.open('https://maps.app.goo.gl/eKw52z6dzRPi2JEk7', '_blank');"
-              class="sponsor"
-              src="Data/Icons/SM.png"
-            />
           </div>
+
           <div class="" id="countdown-container"></div>
           <button
             class="hide"
@@ -520,4 +530,5 @@
   <script type="text/javascript" src="Interaction/NavBar.js"></script>
   <script type="text/javascript" src="Interaction/Countdown.js"></script>
   <script type="text/javascript" src="Interaction/Home.js"></script>
+  <script type="text/javascript" src="Interaction/Carousel.js"></script>
 </html>
