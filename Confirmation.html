@@ -7,7 +7,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover"
     />
-    <script type="text/javascript" src="Data/Libraries/jQuery.js"></script>
     <link
       rel="preload"
       href="Data/Fonts/Montserrat Regular 400.ttf"
@@ -59,17 +58,10 @@
     />
     <link rel="preload" as="image" href="Data/Animations/SpinnerMedium.svg" />
     <link rel="preload" as="image" href="Data/Animations/SpinnerSmall.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
     <link rel="stylesheet" type="text/css" href="Design/Colors.css" />
     <link rel="stylesheet" type="text/css" href="Design/Fonts.css" />
-    <link rel="stylesheet" type="text/css" href="Design/NavBar.css" />
-    <link rel="stylesheet" type="text/css" href="Design/Home.css" />
-    <link rel="stylesheet" type="text/css" href="Design/Countdown.css" />
-    <link rel="stylesheet" type="text/css" href="Design/Register.css" />
-    <title>Taksha'24 - Register</title>
+    <link rel="stylesheet" type="text/css" href="Design/Confirmation.css" />
+    <title>Thank You</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -102,32 +94,38 @@
     <meta name="theme-color" content="#000000" />
   </head>
   <body>
+    
+    <center>
+      <img
+        id="page-loader"
+        class="hide"
+        src="Data/Animations/SpinnerMedium.svg"
+      />
+    </center>
+
     <div id="notification" class="notification">
-      <img src="Data/Icons/Alert.png" />
+      <span></span>
       <h2>
         Apologies, but you can't join this event due to a scheduling conflict
-        with your current selection. Thank you for your understanding.
+        with your recent registration. Thank you for your understanding.
       </h2>
     </div>
 
-    <div id="registered" class="notification show">
-      <img src="Data/Icons/Completed.png" />
-      <h2>
-        Thank you for confirming your attendance. Please finalize your
-        registration on the event day by making the required payment. We
-        appreciate your cooperation.
-      </h2>
-    </div>
+    <div id="container" class="container hide">
 
-    <div class="container">
+    <h1>THANK YOU!</h1>
 
-    <h1></h1>
-    <p></p>
-
-    <p class="message">
-        Thank you for joining&nbsp<span>TAKSHA'24</span>
+    <div class="message"><p class="">
+      Thank you for confirming your attendance. A confirmation email has been sent to you with details on how to secure your spot at the event. For further inquiries, contact us at <a style="text-decoration: none; color: #2a6ecf" href="mailto:cs@stpauls.ac.in">cs@stpauls.ac.in</a> or refer to the "Learn More" pages for each event to reach the respective event coordinators. Your cooperation is appreciated.
       </p>
-    </form>
+    </div>
+    
+
+      <p class="message bold">Thank you for joining Taksha'24.</p>
+
+      <div class="button">
+      <a class="homebtn" href="Home.html"><span></span>&nbspGo Home</a>
+    </div>
     <h3 class="other-events">Additional Participatory Events</h3>
     <div class="event-list">
       <a href="BugBounty.html" id="bb" class="event-names">BugBounty</a>
@@ -140,11 +138,48 @@
       <a id="tt" href="TwistNTurn.html" class="event-names">Twist'N'Turn</a>
     </div>
   </div>
-    <script
-      type="text/javascript"
-      src="Interaction/InputLabelHandling.js"
-    ></script>
-    <script type="text/javascript" src="Interaction/Register.js"></script>
-    <script></script>
+    <noscript>
+      <div
+        style="
+          box-sizing: bordeborder-box;
+          text-align: center;
+          margin: 30px;
+          padding: 20px;
+          background-color: #ffdcdc;
+          border: 1px solid red;
+          border-radius: 5px;
+        "
+      >
+        <p>
+          This website requires JavaScript to function. Please enable JavaScript
+          in your browser settings to view this page.
+        </p>
+      </div>
+    </noscript>
+    <script type="text/javascript">
+      document.getElementById("page-loader").classList.remove("hide");
+    </script>
+    <script type="text/javascript">
+      function handleLoad() {
+        const loader = document.getElementById("page-loader");
+        const content = document.getElementById("container");
+        const navBar = document.querySelector("nav");
+        const footer = document.querySelector(".footer");
+  
+        if (loader && content) {
+          loader.remove();
+          content.classList.remove("hide");
+          if (navBar) {
+            navBar.classList.remove("hide");
+          }
+          if (footer) {
+            footer.classList.remove("hide");
+          }
+        }
+      }
+  
+      window.addEventListener("load", handleLoad);
+    </script>
+    <script type="text/javascript" src="Interaction/Confirmation.js"></script>
   </body>
 </html>
